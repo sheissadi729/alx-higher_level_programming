@@ -6,9 +6,9 @@ def weight_average(my_list=[]):
     weight_sum = 0
     product_list = list(map(lambda x: x[0] * x[1], my_list))
     weight_list = list(map(lambda x: x[1], my_list))
-    for product in prod_list:
-        product_sum += i
+    for product in product_list:
+        product_sum += product
     for weight in weight_list:
-        weight_sum += s
+        weight_sum += weight
     average = product_sum / weight_sum
     return average
