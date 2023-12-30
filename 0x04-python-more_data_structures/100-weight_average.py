@@ -1,13 +1,14 @@
 #!/usr/bin/python3
+
 def weight_average(my_list=[]):
-    if not my_list:
-        return 0
-
-    num = 0
-    den = 0
-
-    for tup in my_list:
-        num += tup[0] * tup[1]
-        den += tup[1]
-
-    return (num / den)
+    """returns the weighted average of a list of tuples"""
+    product_sum = 0
+    weight_sum = 0
+    product_list = list(map(lambda x: x[0] * x[1], my_list))
+    weight_list = list(map(lambda x: x[1], my_list))
+    for product in prod_list:
+        product_sum += i
+    for weight in weight_list:
+        weight_sum += s
+    average = product_sum / weight_sum
+    return average
