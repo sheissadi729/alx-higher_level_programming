@@ -2,6 +2,8 @@
 
 def weight_average(my_list=[]):
     """returns the weighted average of a list of tuples"""
+    if not my_list:
+        return 0
     product_sum = 0
     weight_sum = 0
     product_list = list(map(lambda x: x[0] * x[1], my_list))
