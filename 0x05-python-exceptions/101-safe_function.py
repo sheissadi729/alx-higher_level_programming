@@ -1,13 +1,14 @@
 #!/usr/bin/python3
-from __future__ import print_function
 import sys
 
 
 def safe_function(fct, *args):
+    ''' executes a function safely'''
     try:
-        res = fct(*args)
-    except Exception as e:
-        print("Exception: {}".format(e), file=sys.stderr)
+        return fct(*args)
+    except ZeroDivisionError as zde:
+        print("Exception:", zde, file=sys.stderr)
         return None
-    else:
-        return res
+    except IndexError as ie:
+        print("Exception:", ie, file=sys.stderr)
+        return None
